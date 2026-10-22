@@ -11,5 +11,4 @@
 |-----------------------|----------------|-------------------|------------------------------------------------------|
 | Server-IOT            | 192.168.7.1    |  Ubuntu Server 24.04 LTS |  Deployment Website dan Database              |
 | Attacker-1         | 192.168.7.10 | Kali Linux        | Menjalankan Nmap, Metasploit, Burp Suite, Hydra       |
-| Attacker-2         | 192.168.7.11 | Kali Linux        | Menjalankan Nmap, Metasploit, Burp Suite, Hydra       |
 | Monitoring       | 192.168.7.13 | Security Onion    | IDS/IPS (Suricata/Zeek), traffic mirrored dari switch |
