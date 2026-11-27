@@ -19,4 +19,4 @@ Berikut ini adalah skenario eksploitasi yang dilakukan menggunakan *platform* Se
 | 4 | 8080 | Nginx & Kernel TCP Stack | Service Disruption / DoS (HTTP Flood & SYN Flood) | Mudah | `ab` (Apache Benchmark), `hping3`, `curl` |
 
 Berikut ini adalah link video demo Siklus Purple Team Loop:
-https://drive.google.com/drive/folders/1NfoiWsTOSQ7T5c_UmoovPF6-peoyv1JZ?usp=sharing
+https://drive.google.com/file/d/1qYJL1MzIH9SjDjgqt4V_OQyheXDo4mK5/view?usp=drive_link
