@@ -17,3 +17,6 @@ Berikut ini adalah skenario eksploitasi yang dilakukan menggunakan *platform* Se
 | 2 | 8080 | Nginx & API KABITA | SQL Injection (SQLi) & API Enumeration | Sedang | `curl`, `sqlmap` |
 | 3 | 8080, 443, 3223 & Host Log | Packet Filter & `/var/log/auth.log` | Conceal, Log Tampering & Defense Evasion (`nmap -f`, `truncate`/`rm`) | Sedang | `nmap`, `truncate`, `rm` |
 | 4 | 8080 | Nginx & Kernel TCP Stack | Service Disruption / DoS (HTTP Flood & SYN Flood) | Mudah | `ab` (Apache Benchmark), `hping3`, `curl` |
+
+Berikut ini adalah link video demo Siklus Purple Team Loop:
+https://drive.google.com/drive/folders/1NfoiWsTOSQ7T5c_UmoovPF6-peoyv1JZ?usp=sharing
