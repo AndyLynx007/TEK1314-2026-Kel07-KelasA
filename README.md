@@ -7,16 +7,13 @@
   <li>Alyssa Daniswara (J0404241099)</li>
 </ul>
 
-## 7 Skenario Eksploitasi Terpilih
+## 4 Skenario Eksploitasi Terpilih
 
-Berikut ini adalah skenario eksploitasi yang akan dilakukan menggunakan <i>platform</i> Metasploitable dan Kali Linux:
+Berikut ini adalah skenario eksploitasi yang dilakukan menggunakan *platform* Server-IOT Ubuntu 24.04 LTS (Nginx + Supabase/KABITA), Security Onion, dan Kali Linux mengacu pada framework **NIST SP 800-61 Rev. 2**:
 
 | # | Port | Service | Teknik | Tingkat Kesulitan | Tool |
-|---|------|---------|--------|--------------------|------|
-| 1 | 1524 | Ingreslock  | Root shell langsung tanpa autentikasi (backdoor bawaan) | Sangat mudah | `netcat`/`telnet` |
-| 2 | 21   | vsftpd 2.3.4 | Backdoor RCE (CVE-2011-2523) | Sangat mudah | Metasploit |
-| 3 | 6667 | UnrealIRCd  | Backdoor RCE | Mudah | Metasploit |
-| 4 | 445  | Samba (usermap_script) | RCE (CVE-2007-2447) | Mudah | Metasploit |
-| 5 | 5900 | VNC | Weak password (`password`) → remote desktop access | Mudah | `vncviewer` + brute-force |
-| 6 | 3306 | MySQL | Default credential (`root` tanpa password) → dump database | Sedang | `mysql` client |
-| 7 | 80   | HTTP (DVWA) | SQL Injection / File Upload | Sedang | Burp Suite / manual |
+|---|------|---------|--------|-------------------|------|
+| 1 | 22, 3223 | OpenSSH (`sshd`) | SSH Brute-Force & Service Enumeration | Mudah | `nmap`, `hydra`, `ssh` |
+| 2 | 8080 | Nginx & API KABITA | SQL Injection (SQLi) & API Enumeration | Sedang | `curl`, `sqlmap` |
+| 3 | 8080, 443, 3223 & Host Log | Packet Filter & `/var/log/auth.log` | Conceal, Log Tampering & Defense Evasion (`nmap -f`, `truncate`/`rm`) | Sedang | `nmap`, `truncate`, `rm` |
+| 4 | 8080 | Nginx & Kernel TCP Stack | Service Disruption / DoS (HTTP Flood & SYN Flood) | Mudah | `ab` (Apache Benchmark), `hping3`, `curl` |
